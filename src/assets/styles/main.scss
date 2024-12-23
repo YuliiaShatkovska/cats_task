@@ -1,0 +1,60 @@
+@import "./fonts";
+@import "./variables.scss";
+@import "./reset.scss";
+@import "vue-select/dist/vue-select.css";
+@import "./mixins.scss";
+@import "./variables.scss";
+
+body {
+  box-sizing: border-box;
+  font-family: "Hind Mysuru";
+
+  background-color: $main-white-color;
+}
+
+.container {
+  position: relative;
+  padding-inline: 24px;
+  margin: 0 auto;
+  width: 327px;
+
+  @include on-tablet {
+    padding-inline: 40px;
+    width: 620px;
+  }
+
+  @include on-desktop {
+    padding-inline: 72px;
+    width: 1295px;
+  }
+}
+
+.vs__clear {
+  display: none;
+}
+
+.vs__dropdown-toggle {
+  background-color: $light-violet !important;
+  color: $secondary-black-color !important;
+  height: 48px;
+}
+
+.vs__dropdown-menu {
+  background-color: $light-violet !important;
+  margin-top: 6px !important;
+  padding-inline: 16px !important;
+}
+
+.vs__dropdown-option--selected {
+  background-color: transparent !important;
+  color: $btn-color !important;
+}
+
+.vs__dropdown-option {
+  padding: 12px 0 !important;
+}
+
+.vs__dropdown-option:hover {
+  color: $accent-color;
+  background-color: transparent !important;
+}
