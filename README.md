@@ -1,3 +1,7 @@
+## Links
+
+- [DEMO](https://yuliiashatkovska.github.io/cats_task/) 
+- [CODE](https://github.com/YuliiaShatkovska/cats_task) 
 
 ## Project Setup
 
