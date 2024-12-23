@@ -8,7 +8,7 @@
 1. Clone the repository:
    ```bash
    git clone https://github.com/your-username/cats_task.git
-   cd cats_task
+   code cats_task
    ```
 2. Install dependencies:  
   ```bash
