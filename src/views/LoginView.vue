@@ -107,7 +107,7 @@ export default {
   }
 
   &__title {
-    color: $main-black-color;
+    color: var(--main-black-color);
     text-align: center;
     font-size: 24px;
     font-weight: 700;
@@ -127,7 +127,7 @@ export default {
   }
 
   &__label {
-    color: $secondary-black-color;
+    color: var(--secondary-black-color);
     font-size: 16px;
     font-weight: 500;
     line-height: 27px;

@@ -41,7 +41,7 @@ export default {
   }
 
   &:hover {
-    background-color: $light-violet;
+    background-color: var(--light-violet);
   }
 }
 .facts__img {
@@ -59,6 +59,7 @@ export default {
 }
 
 .facts__text {
+  color: var((--main-black-color));
   @include on-tablet {
     max-width: 270px;
     padding: 10px;

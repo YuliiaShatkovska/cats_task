@@ -1,4 +1,6 @@
 <script>
+import { mapActions, mapState } from "vuex";
+
 export default {
   name: "Header",
 
@@ -8,12 +10,44 @@ export default {
   },
 
   methods: {
+    ...mapActions(["setTheme"]),
+    toggleTheme() {
+      const theme = this.theme === "light" ? "dark" : "light";
+      this.setTheme(theme);
+      this.applyTheme(theme);
+      localStorage.setItem("theme", theme);
+    },
     handleToggleLogout() {
       this.$emit("toggleLogout");
     },
     handleLogout() {
       this.$emit("logout");
     },
+
+    applyTheme(theme) {
+      if (theme === "light") {
+        document.documentElement.classList.add("light");
+        document.documentElement.classList.remove("dark");
+      } else {
+        document.documentElement.classList.add("dark");
+        document.documentElement.classList.remove("light");
+      }
+    },
+  },
+
+  created() {
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme) {
+      this.applyTheme(savedTheme);
+      this.setTheme(savedTheme);
+    }
+    this.applyTheme(this.theme);
+  },
+
+  computed: {
+    ...mapState({
+      theme: (state) => state.theme,
+    }),
   },
 };
 </script>
@@ -22,9 +56,24 @@ export default {
   <header class="header">
     <div class="container">
       <div class="header__wrap">
-        <router-link to="/facts">
+        <a href="/">
           <img src="../assets/images/icons/logo.svg" alt="logo" class="logo" />
-        </router-link>
+        </a>
+
+        <button type="button" @click="toggleTheme" class="theme_btn">
+          <img
+            v-if="theme === 'light'"
+            src="../assets/images/icons/sun-icon.svg"
+            alt="theme light sun button"
+            class="theme_icon"
+          />
+          <img
+            v-else
+            src="../assets/images/icons/moon-icon.svg"
+            alt="theme dark moon button"
+            class="theme_icon"
+          />
+        </button>
 
         <button
           type="button"
@@ -54,7 +103,7 @@ export default {
   display: flex;
   align-items: center;
 
-  background-color: $light-violet;
+  background-color: var(--light-violet);
 
   @include on-tablet {
     height: 95px;
@@ -126,5 +175,15 @@ export default {
       color: $main-white-color;
     }
   }
+}
+
+.theme_btn {
+  background-color: transparent;
+  border: none;
+}
+
+.theme_icon {
+  width: 24px;
+  height: 24px;
 }
 </style>

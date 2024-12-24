@@ -55,7 +55,7 @@ export default {
 </script>
 
 <template>
-  <div>
+  <div class="content">
     <div class="loader_box" v-if="isLoading">
       <Loader />
     </div>
@@ -69,7 +69,7 @@ export default {
       />
 
       <div class="container">
-        <transition class="main" name="'slide'">
+        <transition name="slide">
           <router-view />
         </transition>
       </div>
@@ -83,6 +83,12 @@ export default {
 @import "./assets/styles/mixins.scss";
 @import "./assets/styles/variables.scss";
 
+.content {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 .loader_box {
   height: 100vh;
   display: flex;
@@ -95,14 +101,6 @@ export default {
 
   @include on-tablet {
     height: 67px;
-  }
-}
-
-.main {
-  min-height: calc(100vh - 36px - 416px);
-
-  @include on-tablet {
-    min-height: calc(100vh - 67px - 191px);
   }
 }
 </style>

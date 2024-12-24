@@ -6,7 +6,7 @@ import { options } from "../assets/constants/selectOptions.js";
 import { images } from "../assets/constants/images.js";
 import { getVisibleFacts } from "../helpers/getVisibleFacts.js";
 import Loader from "../components/Loader.vue";
-import FactsItem from "../components/FactsList.vue";
+import FactsItem from "../components/FactsItem.vue";
 
 export default {
   name: "Facts",
@@ -167,7 +167,7 @@ export default {
   &__title {
     margin: 0 auto 20px;
     text-align: center;
-    color: $main-black-color;
+    color: var(--main-black-color);
     font-size: 24px;
     line-height: 30px;
 
@@ -298,7 +298,7 @@ export default {
     margin: 0 auto;
     text-align: center;
     font-size: 20px;
-    color: $main-black-color;
+    color: var(--main-black-color);
   }
 }
 

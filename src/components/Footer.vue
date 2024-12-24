@@ -8,13 +8,13 @@ export default {
   <footer class="footer">
     <div class="container">
       <div class="footer__top">
-        <router-link to="/facts">
+        <a href="/">
           <img
             src="../assets/images/icons/logo_white.svg"
             alt="logo"
             class="logo"
           />
-        </router-link>
+        </a>
 
         <div class="footer__top-nav">
           <div class="footer__top-wrap">

@@ -1,7 +1,7 @@
 <script>
 export default {
   name: "Fact",
-  data () {
+  data() {
     return {
       fact: {},
     };
@@ -44,7 +44,7 @@ export default {
     align-items: center;
     gap: 2px;
 
-    color: $secondary-black-color;
+    color: var(--secondary-black-color);
     line-height: 27px;
     font-size: 16px;
   }
@@ -68,7 +68,7 @@ export default {
   }
 
   &__desc {
-    color: $secondary-black-color;
+    color: var(--secondary-black-color);
     font-size: 20px;
     line-height: 32px;
   }

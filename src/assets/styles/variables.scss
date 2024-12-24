@@ -10,3 +10,17 @@ $btn-color: #6e72ec;
 
 $tablet-min-width: 700px;
 $desktop-min-width: 1440px;
+
+html.light {
+  --main-bg-color: #ffff;
+  --main-black-color: #232323;
+  --secondary-black-color: #434343;
+  --light-violet: #ebecff;
+}
+
+html.dark {
+  --main-bg-color: #22193d;
+  --main-black-color: #f0eeee;
+  --secondary-black-color: #d2d2d2;
+  --light-violet: #4f485f;
+}

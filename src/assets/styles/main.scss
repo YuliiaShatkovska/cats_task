@@ -9,7 +9,7 @@ body {
   box-sizing: border-box;
   font-family: "Hind Mysuru";
 
-  background-color: $main-white-color;
+  background-color: var(--main-bg-color);
 }
 
 .container {
@@ -17,6 +17,7 @@ body {
   padding-inline: 24px;
   margin: 0 auto;
   width: 327px;
+  flex-grow: 1;
 
   @include on-tablet {
     padding-inline: 40px;
