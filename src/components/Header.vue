@@ -56,9 +56,9 @@ export default {
   <header class="header">
     <div class="container">
       <div class="header__wrap">
-        <a href="/index.html">
+        <router-link to="/">
           <img src="../assets/images/icons/logo.svg" alt="logo" class="logo" />
-        </a>
+        </router-link>
 
         <button type="button" @click="toggleTheme" class="theme_btn">
           <img
