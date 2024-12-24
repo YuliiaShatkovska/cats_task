@@ -56,7 +56,7 @@ export default {
   <header class="header">
     <div class="container">
       <div class="header__wrap">
-        <a href="/">
+        <a href="/index.html">
           <img src="../assets/images/icons/logo.svg" alt="logo" class="logo" />
         </a>
 
